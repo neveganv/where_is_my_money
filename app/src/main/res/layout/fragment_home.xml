@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.87"
+        tools:layout_editor_absoluteX="1dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/newMoney"
+            android:layout_width="match_parent"
+            android:layout_height="78dp"
+            android:visibility="invisible"
+            app:cardBackgroundColor="#FFEBEE"
+            app:contentPadding="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/today_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Description"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/today_sum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="Sum"
+                    android:inputType="numberDecimal"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/accept"
+                    android:layout_width="34dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#878787"
+                    android:backgroundTintMode="src_in"
+                    android:onClick="onAcceptClick"
+                    android:tag="home"
+                    app:icon="@drawable/ic_baseline_check_24"
+                    app:iconTint="#FFFFFF"
+                    app:iconTintMode="src_in"
+                    tools:visibility="visible" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="plusClick"
+                android:text="+" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="minusClick"
+                android:backgroundTint="#E53935"
+                android:text="-" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
